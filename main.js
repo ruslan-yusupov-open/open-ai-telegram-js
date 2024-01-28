@@ -21,7 +21,7 @@ gpt как установить гит
         const {text, message_id} = ctx.message ?? {};
         const channelId = ctx.chat?.id;
 
-        if (text.match(/^gpt .{4}/) && channelId) {
+        if (text?.match(/^gpt .{4}/) && channelId) {
             const content = text.substring(4);
             if (busy) {
                 bot.telegram
